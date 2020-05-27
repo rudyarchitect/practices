@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手动实现vue响应式原理</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 双向数据绑定 v-model -->
+        <input type="text" v-model='msg'>
+        <p>{{msg}}</p>
+    </div>
+    <!-- 引入依赖 -->
+    <script src="mvvm.js"></script>
+    <script>
+        let vm = new Mvvm({
+            el:'#app',
+            data:{
+                msg:'hello mvvm'
+            }
+        })
+    </script>
+</body>
+</html>
